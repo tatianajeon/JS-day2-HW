@@ -54,24 +54,19 @@ class Person{
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
-    addAge = () => {
-        this.age += 1
-        return `${this.name} is now ${this.age} years old.`
-    }
-
-    addAges = () => {
-        this.age += 3
+    addAge = num => {
+        this.age += num
         return `${this.name} is now ${this.age} years old.`
     }
 }
 
 let felicia = new Person('Felicia', 1, 'female')
 console.log(felicia.printInfo())
-console.log(felicia.addAge())
+console.log(felicia.addAge(1))
 
 let todd = new Person('Todd', 2, 'male')
 console.log(todd.printInfo())
-console.log(todd.addAges())
+console.log(todd.addAge(3))
 
 
 
