@@ -17,10 +17,12 @@ let person3 = {
         cupids_candies:"Chocolate Malt"
     }]
 }
+
 function fav_foods(person3){
-    console.log(Object.values(person3))
-    console.log(person3.shakes)
-}
+    for (let [key,value] of Object.entries(person3)){
+        console.log(key, value)
+    }
+    }
 
 console.log(fav_foods(person3))
 
