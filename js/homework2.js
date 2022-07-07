@@ -47,15 +47,20 @@ class Person{
 
 
 // Use an arrow to create the printInfo method
-    printInfo() {
+    printInfo = () => {
         return `Name: ${this.name}, \nAge: ${this.age}, \nGender: ${this.gender}`
     }
 
 
 // Create another arrow function for the addAge method that takes a single parameter
 // Adding to the age 
-    addAge(){
+    addAge = () => {
         this.age += 1
+        return `${this.name} is now ${this.age} years old.`
+    }
+
+    addAges = () => {
+        this.age += 3
         return `${this.name} is now ${this.age} years old.`
     }
 }
@@ -63,6 +68,10 @@ class Person{
 let felicia = new Person('Felicia', 1, 'female')
 console.log(felicia.printInfo())
 console.log(felicia.addAge())
+
+let todd = new Person('Todd', 2, 'male')
+console.log(todd.printInfo())
+console.log(todd.addAges())
 
 
 
